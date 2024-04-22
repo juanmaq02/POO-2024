@@ -62,6 +62,6 @@ class ManejadorMoto:
                     tot += float(b._ManejadorPedido__listaPedido[j].getPrecio())
                 j += 1
             print("Total:" + ' ' * 53 + "${:.2f}".format(tot))
-            print("Comision:" + ' ' * 50 + "${:.2f}\n".format(tot * (20 / 100)))
+            print("Comision: ${:.2f}\n".format(tot * (20 / 100)))
             i += 1
         os.system('pause')
