@@ -5,9 +5,9 @@ class Pedido:
     __tiempoE: int
     __tiempoR: int
     __precio: float
-    def __init__(self, patente, id, comidas, tiempoE, precio, tiempoR = 0):
+    def __init__(self, patente, ide, comidas, tiempoE, precio, tiempoR = 0):
         self.__patente = patente
-        self.__id = id
+        self.__id = ide
         self.__comidas = comidas
         self.__tiempoE = tiempoE
         self.__tiempoR = tiempoR

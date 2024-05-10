@@ -16,20 +16,17 @@ class ManejadorPedido:
             if bandera:
                 bandera = False
             else:
-                self.agregarPedido(Pedido(linea[0], linea[1], linea[2], linea[3], linea[5], linea[4])) 
+                self.agregarPedido(Pedido(linea[0], linea[1], linea[2], linea[3], linea[5], linea[4]))
     def nuevoPedido(self, a):
         patente = input("Ingrese patente de la moto: ")
         i = a.buscaPatente(patente)
         if i != None:
-            try:
-                id = input("Ingrese ID del pedido: ")
-                pedido = input("Ingrese su pedido: ")
-                tiempo = int(input("Ingrese el tiempo estimado (en minutos): "))
-                precio = float(input("Ingrese el precio del pedido: $"))
-                self.agregarPedido(Pedido(patente, id, pedido, tiempo, precio))
-                print("Pedido agregado con exito.")
-            except ValueError:
-                print("Valor erróneo.")
+            id = input("Ingrese ID del pedido: ")    
+            pedido = input("Ingrese su pedido: ")
+            tiempo = int(input("Ingrese el tiempo estimado (en minutos): "))
+            precio = float(input("Ingrese el precio del pedido: $"))
+            self.agregarPedido(Pedido(patente, id, pedido, tiempo, precio))
+            print("Pedido agregado con exito.")
         else:
             print("No se ha encontrado una moto con la patente solicitada.")
         os.system('pause')
