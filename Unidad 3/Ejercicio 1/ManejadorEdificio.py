@@ -87,9 +87,17 @@ class ManejadorEdificio:
                     j += 1
                 sup.append(tot)
                 i += 1
-            i = int(input("Ingrese el numero del edificio del departamento a consultar: "))
-            j = int(input("Ingrese ID del departamento: "))
-            por = (float(self.__listaEdificio[i-1].getDepartamentos()[j-1].getSuperficie()) * 100) / sup[i - 1]
+            try:
+                i = int(input("Ingrese el numero del edificio del departamento a consultar: "))
+                j = int(input("Ingrese ID del departamento: "))
+            except ValueError:
+                print("Valor incorrecto.")
+                return
+            try:
+                por = (float(self.__listaEdificio[i-1].getDepartamentos()[j-1].getSuperficie()) * 100) / sup[i - 1]
+            except IndexError:
+                print("Valores incorrectos.")
+                return
             print("Superficie total del departamento ingresado: {} metros cuadrados y representa el {:.2f} porciento del total. ".format(self.__listaEdificio[i-1].getDepartamentos()[j-1].getSuperficie(), por))
         else:
             print("No se ha encontrado el propietario ingresado.")
