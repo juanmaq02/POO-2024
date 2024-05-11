@@ -75,6 +75,8 @@ class ManejadorEdificio:
             i += 1
         if bandera:
             i = 0
+            ed = []
+            dep = []
             print("Departamentos del propietario {}:\n".format(nom))
             while i < len(self.__listaEdificio):
                 tot = 0
@@ -84,6 +86,8 @@ class ManejadorEdificio:
                     tot += float(self.__listaEdificio[i].getDepartamentos()[j].getSuperficie())
                     if nom == self.__listaEdificio[i].getDepartamentos()[j].getNomYApe():
                         print("ID del departamento: {}".format(self.__listaEdificio[i].getDepartamentos()[j].getID()))
+                        ed.append(i)
+                        dep.append(j)
                     j += 1
                 sup.append(tot)
                 i += 1
@@ -93,12 +97,11 @@ class ManejadorEdificio:
             except ValueError:
                 print("Valor incorrecto.")
                 return
-            try:
+            if i-1 in ed and j-1 in dep:
                 por = (float(self.__listaEdificio[i-1].getDepartamentos()[j-1].getSuperficie()) * 100) / sup[i - 1]
-            except IndexError:
-                print("Valores incorrectos.")
-                return
-            print("Superficie total del departamento ingresado: {} metros cuadrados y representa el {:.2f} porciento del total. ".format(self.__listaEdificio[i-1].getDepartamentos()[j-1].getSuperficie(), por))
+                print("Superficie total del departamento ingresado: {} metros cuadrados y representa el {:.2f} porciento del total. ".format(self.__listaEdificio[i-1].getDepartamentos()[j-1].getSuperficie(), por))
+            else:
+                print("Los valores ingresados no corresponden a los solicitados.")
         else:
             print("No se ha encontrado el propietario ingresado.")
     
