@@ -1,0 +1,19 @@
+{% extends "base_template.html" %}
+{% block title %}Registrar paquete - LogiPack{% endblock %}
+{% block content %}
+    {% if numeroEnvio %}
+        <h1>Paquete registrado exitosamente</h1>
+        <h2>Número de envío: {{ numeroEnvio }}</h2><br><br>
+        <a href="{{ url_for('registrar_paquete', idsucursal = sucursal.id) }}">Registrar otro paquete</a>
+    {% endif %}
+    {% if numerotransporte %}
+        <h1>Salida de transporte registrado exitosamente</h1>
+        <h2>Número de transporte: {{ numerotransporte }}</h2>
+        <a href="{{ url_for('salida_transporte', idsucursal = sucursal.id) }}">Registrar otra salida de transporte</a>
+    {% endif %}
+    {% if fechahorallegada %}
+        <h1>Llegada de transporte registrado exitosamente</h1>
+        <h2>Fecha y hora de llegada de transporte: {{ fechahorallegada }}</h2>
+        <a href="{{ url_for('llegada_transporte', idsucursal = sucursal.id) }}">Registrar otra llegada de transporte</a>
+    {% endif %}
+{% endblock %}

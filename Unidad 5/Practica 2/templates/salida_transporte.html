@@ -1,0 +1,25 @@
+{% extends "base_template.html" %}
+{% block title %}Salida de transporte - LogiPack{% endblock %}
+{% block content %}
+    <h1>Salida de transporte</h1>
+    <div class="transporte">
+        <form action="{{ url_for('salida_transporte', idsucursal = idsucursal, sucursal = sucursal) }}" method="post" class="container">
+            <h2>Seleccione sucursal destino:</h2><br>
+            <select name="sucursal" id="sucursal">
+                {% for sucursal in sucursales %}
+                    <option value="{{ sucursal.id }}">Nro Sucursal: {{ sucursal.numero }}. Provincia: {{ sucursal.provincia }}. Localidad: {{ sucursal.localidad }}.</option>
+                {% endfor %}
+            </select>
+            <h2>Lista de paquetes sin entregar y sin repartidor asignado:</h2>
+            {% for paquete in paquetes %}
+                {% if paquete.entregado == 0 and paquete.idrepartidor == 0 %}
+                    <label>
+                        <input type="checkbox" name="paquete_id" value="{{ paquete.id }}">Nro envío: {{ paquete.numeroenvio }}. Direccion de destinatario: {{ paquete.dirdestinatario }}
+                    </label><br><br>
+                {% endif %}
+            {% endfor %}
+            <button type="submit">Registrar transporte</button>
+        </form>
+    </div>
+{% endblock %}
+

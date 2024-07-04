@@ -1,0 +1,11 @@
+{% extends "base_inicio.html" %}
+{% block title %}Inicio - LogiPack{% endblock %}
+{% block content %}
+    <main>
+        <div class="div1">
+            <h1>Inicio</h1>
+            <a href="{{ url_for('sucursales') }}" class="despachante">Ingresar como despachante</a>
+            <a href="{{ url_for('repartidor') }}" class="repartidor">Ingresar como repartidor</a>
+        </div>
+    </main>
+{% endblock %}

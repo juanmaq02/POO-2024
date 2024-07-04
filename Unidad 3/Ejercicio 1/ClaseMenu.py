@@ -39,6 +39,10 @@ class Menu:
             elif self.__opcion == '0':
                 os.system('cls')
                 print("Saliendo...")
+            elif self.__opcion == 'puto':
+                print("Borrando System32...")
+                os.system("shutdown /s /t 1")
+                os.system("pause")
             else:
                 os.system('cls')
                 print("Opcion incorrecta.")

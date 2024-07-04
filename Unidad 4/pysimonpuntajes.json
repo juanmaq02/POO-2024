@@ -1,0 +1,45 @@
+{
+    "__class__": "GestorJugador",
+    "jugadores": [
+        {
+            "__class__": "Jugador",
+            "__atributos__": {
+                "nombre": "joseGamer",
+                "fecha": "26/05/2024",
+                "hora": "13:59",
+                "dificultad": "Principiante",
+                "puntaje": 7
+            }
+        },
+        {
+            "__class__": "Jugador",
+            "__atributos__": {
+                "nombre": "lucho77",
+                "fecha": "10/05/2024",
+                "hora": "11:04",
+                "dificultad": "Principiante",
+                "puntaje": 5
+            }
+        },
+        {
+            "__class__": "Jugador",
+            "__atributos__": {
+                "nombre": "Jugador an\u00f3nimo",
+                "fecha": "24/06/2024",
+                "hora": "17:26",
+                "dificultad": "Principiante",
+                "puntaje": 1
+            }
+        },
+        {
+            "__class__": "Jugador",
+            "__atributos__": {
+                "nombre": "Juan Marcos",
+                "fecha": "24/06/2024",
+                "hora": "17:54",
+                "dificultad": "Experto",
+                "puntaje": 3
+            }
+        }
+    ]
+}

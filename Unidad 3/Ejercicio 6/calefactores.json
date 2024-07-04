@@ -1,0 +1,92 @@
+{
+    "__class__": "Lista",
+    "calefactores": [
+        {
+            "__class__": "CalefactorE",
+            "__atributos__": {
+                "marca": "Philips",
+                "modelo": "PH1000",
+                "pais": "Argentina",
+                "precio": 8000,
+                "formaP": "contado",
+                "cantC": 1,
+                "promocion": "Si",
+                "potMax": 1500,
+                "importeV": 6868.0
+            }
+        },
+        {
+            "__class__": "CalefactorG",
+            "__atributos__": {
+                "marca": "LG",
+                "modelo": "LG2000",
+                "pais": "Brasil",
+                "precio": 12000,
+                "formaP": "cuotas",
+                "cantC": 12,
+                "promocion": "No",
+                "matricula": "GN01-00001-06-057",
+                "calorias": 4000,
+                "importeV": 16968.0
+            }
+        },
+        {
+            "__class__": "CalefactorE",
+            "__atributos__": {
+                "marca": "Samsung",
+                "modelo": "SAM3000",
+                "pais": "Chile",
+                "precio": 9000,
+                "formaP": "contado",
+                "cantC": 1,
+                "promocion": "Si",
+                "potMax": 2000,
+                "importeV": 7726.5
+            }
+        },
+        {
+            "__class__": "CalefactorE",
+            "__atributos__": {
+                "marca": "Philips",
+                "modelo": "ACM1PT",
+                "pais": "Bolivia",
+                "precio": 7000,
+                "formaP": "cuotas",
+                "cantC": 6,
+                "promocion": "No",
+                "potMax": 2500,
+                "importeV": 9191.0
+            }
+        },
+        {
+            "__class__": "CalefactorG",
+            "__atributos__": {
+                "marca": "Whirlpool",
+                "modelo": "WP4000",
+                "pais": "Mexico",
+                "precio": 15000,
+                "formaP": "cuotas",
+                "cantC": 12,
+                "promocion": "No",
+                "matricula": "GN01-00001-06-058",
+                "calorias": 4500,
+                "importeV": 21210.0
+            }
+        },
+        {
+            "__class__": "CalefactorG",
+            "__atributos__": {
+                "marca": "Whirlpool",
+                "modelo": "ACM1PT",
+                "pais": "Bolivia",
+                "precio": 2000.0,
+                "formaP": "cuotas",
+                "cantC": 12,
+                "promocion": "Si",
+                "matricula": "GN02-12232-13-433",
+                "calorias": 4000,
+                "importeV": 2403.8
+            }
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{% extends "base_template.html" %}
+{% block title %}Llegada de transporte - LogiPack{% endblock %}
+{% block content %}
+    <h1>Llegada de tranporte</h1>
+    <div class="transporte">
+        <form action="{{ url_for('llegada_transporte', idsucursal = idsucursal, sucursal = sucursal) }}" method="post" class="container">
+            <h2>Seleccione transporte:</h2><br>
+            {% for transporte in transportes %}
+                {% if transporte.fechahorallegada == '' and transporte.idsucursal == sucursal.id %}
+                    <label><input type="radio" name="transporte_id" value="{{ transporte.id }}">Nro de transporte: {{ transporte.numerotransporte }}. Fecha y hora de salida: {{ transporte.fechahorasalida }}.</label><br><br>
+                {% endif %}
+            {% endfor %}
+            <button type="submit">Registrar llegada</button>
+        </form>
+    </div>
+{% endblock %}

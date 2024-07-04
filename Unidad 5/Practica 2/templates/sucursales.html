@@ -1,0 +1,18 @@
+{% extends "base_inicio.html" %}
+{% block title %}Inicio Despachante - LogiPack{% endblock %}
+{% block content %}
+    <main>
+        <div class="div1">
+            <h1>Lista de sucursales</h1>
+            <form action="{{ url_for('sucursales') }}" method="post" class="container">
+                <select name="sucursal" id="sucursal">
+                    {% for sucursal in sucursales %}
+                        <option value="{{ sucursal.id }}">Nro Sucursal: {{ sucursal.numero }}. Provincia: {{ sucursal.provincia }}. Localidad: {{ sucursal.localidad }}.</option>
+                    {% endfor %}
+                </select>
+                <br><br>
+                <input type="submit" value="Ingresar">
+            </form>
+        </div>
+    </main>
+{% endblock %}

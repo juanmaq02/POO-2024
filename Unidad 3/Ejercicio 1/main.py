@@ -6,5 +6,6 @@ def test():
     a.cargaEdificiosYDepartamentos()
     b = Menu()
     b.MenuDeOpciones(a)
+    
 if __name__ == '__main__':
     test()

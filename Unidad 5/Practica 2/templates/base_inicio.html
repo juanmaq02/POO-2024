@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="icon" href="/static/img/LogiPack_transparentIco.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        main{
+            text-align: center;
+        }
+        body{
+            background-image: url('/static/img/LogiPack.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #F3FF90;
+            font-family: 'Poppins';
+        }
+        h1{
+            font-size: 75px;
+        }
+        .div1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(155, 236, 0, 0.5);
+            border: 1px solid ;
+            border-radius: 100px;
+            width: 50%;
+            height: 50%;
+            align-items: center
+        }
+        select{
+            border: 1px solid;
+            border-radius: 25px;
+            background-color: #F3FF90;
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Poppins';
+        }
+        input{
+            border: 1px solid;
+            border-radius: 10px;
+            background-color: #F3FF90;
+            font-size: 20px;
+            font-family: 'Poppins';
+            transition: background-color 0.3s, border 0.3s, color 0.3s;
+        }
+        input:hover{
+            background-color: rgb(155, 236, 0);
+            border: 1px solid white;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            border: 1px solid black;
+            color: black;
+            padding: 25px;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+        a:hover{
+            background-color: rgb(155, 236, 0);
+        }
+        .despachante{
+            background-color: #06D001;
+        }
+        .repartidor{
+            background-color: #F3FF90;
+        }
+    </style>
+</head>
+<body>
+    {% block content %} {% endblock %}
+</body>
+</html>

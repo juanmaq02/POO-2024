@@ -1,0 +1,27 @@
+{% extends "base_template.html" %}
+{% block title %}Registrar paquete - LogiPack{% endblock %}
+{% block content %}
+    <h1>Registrar paquete</h1>
+    <div class="transporte">
+        <form action="{{ url_for('registrado', idsucursal = idsucursal) }}" method="post" class="container">
+        <h2>Ingrese los datos del paquete:</h2>
+            <h3>Peso del paquete:</h3>
+            <input type="number" name="peso" class="entry"> Kg.
+            {% if Epeso == True %}
+                <h3 class="error">Ingrese un peso válido.</h3>
+            {% endif %}
+            <h3>Nombre del destinatario:</h3>
+            <input type="text" name="nombre" class="entry">
+            {% if Enombre == True %}
+                <h3 class="error">Ingrese un nombre válido.</h3>
+            {% endif %}
+            <h3>Dirección del destinatario:</h3>
+            <input type="text" name="direccion" class="entry">
+            {% if Epeso == True %}
+                <h3 class="error">Ingrese una dirección válida.</h3>
+            {% endif %}
+            <br><br>
+            <button type="submit">Registrar paquete</button>
+        </form>
+    </div>
+{% endblock %}

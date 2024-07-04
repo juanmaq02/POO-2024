@@ -1,5 +1,5 @@
 class MaterialR:
-    __material: str
+    __material: int
     __caracteristicas: str
     __cantUtilizada: float
     __costoAdi: float
@@ -21,3 +21,6 @@ class MaterialR:
 
     def getCostoAdi(self):
         return self.__costoAdi
+    
+    def __str__(self):
+        return f'Material {self.__material}:   Características: {self.__caracteristicas}   Cantidad Utilizada: {self.__cantUtilizada}   Costo adicional: ${self.__costoAdi}'

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="icon" href="/static/img/LogiPack_transparentIco.png" type="image/png">
+    <link rel="stylesheet" href="{{url_for('static', filename= 'css/estilos.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="{{ url_for('inicio') }}"><img src="/static/img/LogiPack_transparent.png" alt="Logo de LogiPack" height="200px" width="200px"></a>
+        <p>Sucursal {{ sucursal.numero }}<br>Provincia: {{ sucursal.provincia }}</p>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('despachante', idsucursal = sucursal.id) }}">Inicio</a></li>
+                <li><a href="{{ url_for('registrar_paquete', idsucursal = sucursal.id) }}">Registrar Paquete</a></li>
+                <li><a href="{{ url_for('salida_transporte', idsucursal = sucursal.id) }}">Salida de transporte</a></li>
+                <li><a href="{{ url_for('llegada_transporte', idsucursal = sucursal.id) }}">Llegada de transporte</a></li>
+                <li><a href="{{ url_for('asignar_repartidor', idsucursal = sucursal.id) }}">Asignar paquete a repartidor</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %} {% endblock %}
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

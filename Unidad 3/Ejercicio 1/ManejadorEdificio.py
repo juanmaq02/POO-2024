@@ -77,18 +77,22 @@ class ManejadorEdificio:
             i = 0
             ed = []
             dep = []
-            print("Departamentos del propietario {}:\n".format(nom))
+            print("Departamentos del propietario {}:".format(nom))
             while i < len(self.__listaEdificio):
                 tot = 0
                 j = 0
-                print("Edificio {} {}:".format(i + 1, self.__listaEdificio[i].getNombre()))
+                print("\nEdificio {} {}:\n----------------------------------".format(i + 1, self.__listaEdificio[i].getNombre()))
+                bandera2 = False
                 while j < len(self.__listaEdificio[i].getDepartamentos()):
                     tot += float(self.__listaEdificio[i].getDepartamentos()[j].getSuperficie())
                     if nom == self.__listaEdificio[i].getDepartamentos()[j].getNomYApe():
                         print("ID del departamento: {}".format(self.__listaEdificio[i].getDepartamentos()[j].getID()))
+                        bandera2 = True
                         ed.append(i)
                         dep.append(j)
                     j += 1
+                if not bandera2:
+                    print("No posee.")
                 sup.append(tot)
                 i += 1
             try:

@@ -1,0 +1,16 @@
+{% extends "base_template.html" %}
+{% block title %}Inicio Despachante - LogiPack{% endblock %}
+{% block content %}
+    {% if hora > 6 and hora < 12 %}
+    <h1>Buenos días, despachante.</h1>
+    {% elif hora >= 12 and hora < 21 %}
+    <h1>Buenas tardes, despachante.</h1>
+    {% else %}
+    <h1>Buenas noches, despachante.</h1>
+    {% endif %}
+    <div class="datos-sucursal">
+        <h2>Sucursal:</h2>
+        <p>Número de sucursal: {{ sucursal.numero }}<br>Provincia: {{ sucursal.provincia }}<br>Localidad: {{ sucursal.localidad }}<br>Dirección: {{ sucursal.direccion }}</p><br><br>
+        <a href="{{ url_for('sucursales') }}">Cambiar de sucursal</a>
+    </div>
+{% endblock %}
